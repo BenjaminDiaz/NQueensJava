@@ -9,21 +9,6 @@ public class NQueensSolution {
 	}
 
 	public void findSolution() {
-
-		while (!q.isSolved()) {
-			for (int i = 0; i < q.getSize(); i++) {
-				for (int j = i + 1; j < q.getSize(); j++) {
-					if ((q.getCollision(i) != 0) || (q.getCollision(j) != 0))
-						q.swapQueens(i, j);
-
-					System.out.println(q);
-				}
-			}
-		}
-		System.out.println(q);
-	}
-
-	public void findSolution2() {
 		int maxI, tempI;
 		int c = 0;
 		Random r = new Random();
