@@ -11,6 +11,7 @@ public class NQueensSolution {
 	public void findSolution() {
 		int maxI, tempI;
 		int c = 0;
+		int a = 0;
 		Random r = new Random();
 		while (!q.isSolved()) {
 			maxI = q.getMaxCollisionIndex();
@@ -18,12 +19,14 @@ public class NQueensSolution {
 			q.swapQueens(maxI, tempI);
 			q.setCollision(q.getCollision());
 			c++;
-			if (c > 1300) {
+			if (c > q.getSize() * 10) {
 				q = new NQueens();
 				c = 0;
+				a++;
 			}
 		}
 		System.out.println(q);
+		System.out.println(c+" ciclos");
 	}
 
 }

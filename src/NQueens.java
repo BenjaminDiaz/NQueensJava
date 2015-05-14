@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class NQueens {
-	private int SIZE = 50;
+	private int SIZE = 100;
 	private int[] board;
 	private int[] collision;
 
@@ -39,8 +39,8 @@ public class NQueens {
 
 	@Override
 	public String toString() {
-		return "NQueens [SIZE=" + SIZE + ", board=" + Arrays.toString(board)
-				+ ", collision=" + Arrays.toString(collision) + "]";
+		return "NQueens: \n\tSIZE=" + SIZE + ", \n\tboard=" + Arrays.toString(board)
+				+ ", \n\tcollision=" + Arrays.toString(collision);
 	}
 
 	public int[] getCollision() {
